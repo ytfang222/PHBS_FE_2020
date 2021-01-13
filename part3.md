@@ -1,12 +1,12 @@
 Final part is a notebook to reproduce partial results of the paper in the section 2 and section3. To sum up, the paper propose a new stochastic volatility model with Bayesian methods via Markov chan monte carlo(MCMC) methods.
 
-We also give special credit to ChadFulton who provide the related dataset and code and insight us to do the simulation. This is a useful reference link for us to learn and coding.
+We also give special credit to ChadFulton who provide the related dataset and code and insight for us to do the simulation. This is a useful reference link for us to learn and coding.
 
 
 
 //
 
-For the empirical illustration in this notebook, we use a exchange rate dataset which contains USXUK, USXGER, USXJPN. We do log transformation and make one lag difference to see that transformed data in time series is stationary. The plot shows that it is smoothed.
+For the empirical illustration in this notebook, we use a exchange rate dataset which contains sterling, Deutsche Mark, Japanese Yen against USD. We do log transformation and make one lag difference to see that transformed data in time series is stationary. The plot shows that it is smoothed.
 
 
 
