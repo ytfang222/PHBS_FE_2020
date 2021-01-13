@@ -14734,9 +14734,7 @@ $$
                        <span class="p">[</span><span class="mf">0.00730</span><span class="p">,</span> <span class="o">-</span><span class="mf">10.12999</span><span class="p">,</span> <span class="mf">5.79596</span><span class="p">]])</span>
 
 <span class="k">class</span> <span class="nc">TVLLDT</span><span class="p">(</span><span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">statespace</span><span class="o">.</span><span class="n">MLEModel</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Time-varying local linear deterministic trend</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#simulate and sample from a mixture normal distriubtion</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endog</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.001</span><span class="p">):</span>
         <span class="c1"># Convert to log squares, with offset</span>
         <span class="n">endog</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">endog</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">offset</span><span class="p">)</span>
@@ -14981,8 +14979,6 @@ QMLE estimates
 <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">mean_beta</span><span class="p">,</span> <span class="n">ylim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ylim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Posterior mean&#39;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">res_QLSV</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="n">ylim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ylim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;QMLE&#39;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\beta$&#39;</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="n">ylim</span><span class="p">);</span>
-
-<span class="c1">#把ht</span>
 </pre></div>
 
      </div>
